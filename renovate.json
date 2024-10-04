@@ -1,0 +1,35 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["github>cidverse/renovate-config:default"],
+  "baseBranches": ["main"],
+  "assignees": [],
+  "reviewers": ["PhilippHeuer"],
+  "packageRules": [
+    {
+      "groupName": "Reproducible Builds - Java",
+      "groupSlug": "reproducible-builds-java",
+      "matchDatasources": ["maven"],
+      "prBodyDefinitions": {
+        "Reproducible": "![Reproducible Builds](https://img.shields.io/endpoint?url=https://philippheuer.github.io/reproducible-central-index/central/maven/io/github/xanthic/cache/cache-provider-caffeine3/badge.json)"
+      }
+    },
+    {
+      "groupName": "OSSF - GitHub",
+      "groupSlug": "ossf-github",
+      "matchSourceUrlPrefixes": ["https://github.com/"],
+      "prBodyDefinitions": {
+        "OpenSSF": "[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/{{sourceRepo}}/badge)](https://securityscorecards.dev/viewer/?uri=github.com/{{sourceRepo}})"
+      }
+    }
+  ],
+  "prBodyColumns": [
+    "Package",
+    "Change",
+    "Age",
+    "Adoption",
+    "Passing",
+    "Confidence",
+    "Reproducible",
+    "OpenSSF"
+  ]
+}
