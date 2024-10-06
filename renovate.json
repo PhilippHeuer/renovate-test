@@ -14,7 +14,7 @@
     {
       "matchDatasources": ["maven"],
       "prBodyDefinitions": {
-        "Reproducible": "![Reproducible Builds](https://img.shields.io/endpoint?url=https://philippheuer.github.io/reproducible-central-index/central/maven/io/github/xanthic/cache/cache-provider-caffeine3/badge.json)"
+        "Reproducible": "{{#if newVersion}}![Reproducible Builds](https://img.shields.io/endpoint?url=https://jvm-rebuild.philippheuer.me/v1/dependency/badge?coordinate={{depName}}:{{{newVersion}}}){{/if}}"
       },
       "prBodyColumns": [
         "Package",
