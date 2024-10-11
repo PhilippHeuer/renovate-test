@@ -1,7 +1,5 @@
 // Plugins
-plugins {
-    id("me.philippheuer.configuration") version "0.12.0"
-}
+plugins { id("me.philippheuer.configuration") version "0.12.0" }
 
 version = properties["version"] as String
 
@@ -10,9 +8,7 @@ allprojects {
     apply(plugin = "me.philippheuer.configuration")
 
     // Repositories
-    repositories {
-        mavenCentral()
-    }
+    repositories { mavenCentral() }
 
     projectConfiguration {
         language.set(me.philippheuer.projectcfg.domain.ProjectLanguage.JAVA)
