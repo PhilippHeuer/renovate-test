@@ -13,9 +13,8 @@
     },
     {
       "matchDatasources": ["maven"],
-      "registryUrls": ["https://repo.maven.apache.org/maven2/"],
       "prBodyDefinitions": {
-        "Reproducible": "{{#if newVersion}}[![Reproducible Builds](https://img.shields.io/endpoint?url=https://jvm-rebuild.philippheuer.me/v1/badge/reproducible/maven/mavencentral/{{depName}}/{{{newVersion}}}?theme=renovate)](https://jvm-rebuild.philippheuer.me/v1/redirect/reproducible/maven/{{depName}}/{{{newVersion}}}){{/if}}"
+        "Reproducible": "{{#if newVersion}}[![Reproducible Builds](https://img.shields.io/endpoint?url=https://jvm-rebuild.philippheuer.me/v1/badge/reproducible/maven/{{depName}}/{{{newVersion}}}?theme=renovate)](https://jvm-rebuild.philippheuer.me/v1/redirect/reproducible/maven/{{depName}}/{{{newVersion}}}){{/if}}"
       },
       "prBodyColumns": [
         "Package",
