@@ -8,13 +8,13 @@
     {
       "matchSourceUrlPrefixes": ["https://github.com/"],
       "prBodyDefinitions": {
-        "OpenSSF": "[![OpenSSF Scorecard](https://api.securityscorecards.dev/projects/github.com/{{sourceRepo}}/badge)](https://securityscorecards.dev/viewer/?uri=github.com/{{sourceRepo}})"
+        "OpenSSF": "[![OpenSSF](https://img.shields.io/ossf-scorecard/github.com/{{sourceRepo}}?label=OpenSSF&style=flat)](https://securityscorecards.dev/viewer/?uri=github.com/{{sourceRepo}})"
       }
     },
     {
       "matchDatasources": ["maven"],
       "prBodyDefinitions": {
-        "Reproducible": "{{#if newVersion}}[![Reproducible Builds](https://img.shields.io/endpoint?url=https://jvm-rebuild.philippheuer.me/v1/badge/reproducible/maven/{{depName}}/{{{newVersion}}}?theme=renovate)](https://jvm-rebuild.philippheuer.me/v1/redirect/reproducible/maven/{{depName}}/{{{newVersion}}}){{/if}}"
+        "Reproducible": "{{#if newVersion}}[![Reproducible Builds](https://img.shields.io/endpoint?url=https://jvm-rebuild.philippheuer.me/v1/badge/reproducible/maven/{{#if registryUrl}}{{replace '/' '%2f' registryUrl}}/{{/if}}{{depName}}/{{{newVersion}}}?theme=renovate)](https://jvm-rebuild.philippheuer.me/v1/redirect/reproducible/maven/{{depName}}/{{{newVersion}}}){{/if}}"
       },
       "prBodyColumns": [
         "Package",
