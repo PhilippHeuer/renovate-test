@@ -21,7 +21,7 @@ allprojects {
     dependencies {
         api(platform("io.github.xanthic.cache:cache-bom:0.6.0"))
         api("io.github.xanthic.cache:cache-core:0.6.0")
-        implementation("com.github.twitch4j:twitch4j-util:1.21.0")
+        implementation("com.github.twitch4j:twitch4j-util:1.22.0")
         mplementation("com.github.philippheuer.events4j:events4j-core:0.12.0")
     }
 }
