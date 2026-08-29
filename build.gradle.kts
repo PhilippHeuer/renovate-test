@@ -1,5 +1,5 @@
 // Plugins
-plugins { id("me.philippheuer.configuration") version "0.12.0" }
+plugins { id("me.philippheuer.configuration") version "0.20.5" }
 
 version = properties["version"] as String
 
